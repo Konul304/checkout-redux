@@ -7,7 +7,7 @@ const Home = () => {
         <>
             <section id="home">
                 <div className="container ">
-                    <div className="home_content d-flex flex-wrap mb-4 me-4 justify-content-center">
+                    <div className="home_content d-flex flex-wrap mb-4 me-4 justify-content-center align-items-baseline">
                         {
                             productsData.map((item) => (
                                 <ProductsCard key={item.id} {...item} />
