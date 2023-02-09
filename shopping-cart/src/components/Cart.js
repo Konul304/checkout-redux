@@ -42,13 +42,13 @@ const Cart = () => {
                         <div className="cart_content mt-5 ">
                             <div className="cart_head ps-5 d-flex justify-content-md-between pe-5 pt-3 pb-3 text-bg-warning">
                                 <h2 className='ms-5'>Cart <small>({cartQuantity})</small></h2>
-                                <div
-                                    title="Close"
-                                    className="close_btn"
+                                <button
+                                    
+                                    className="close_btn btn btn-light"
                                     onClick={() => handleCloseCart(false)}
                                 >
                                     <span>&times;</span>
-                                </div>
+                                </button>
                             </div>
 
                             <div className="cart_body d-flex flex-wrap justify-content-center align-items-md-end pt-5">
