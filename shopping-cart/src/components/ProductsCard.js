@@ -5,7 +5,7 @@ import { addItem } from '../store/slices/cartSlice';
 
 const ProductsCard = (props) => {
 
-    const { img, rating, title, price } = props;
+    const { img, title, price } = props;
 
     const [isAdded, setIsAdded] = useState(false);
 
@@ -25,14 +25,12 @@ const ProductsCard = (props) => {
         }, 3000);
     };
 
-
     return (
         <>
             <div className="me-5">
                 <figure>
                     <img src={img} alt="item-img" />
                 </figure>
-                <strong className="rating">{rating}</strong>
                 <h4 className="title">{title}</h4>
                 <h3 className="price">₼ {price}</h3>
                 <button
