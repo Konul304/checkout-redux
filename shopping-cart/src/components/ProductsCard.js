@@ -27,7 +27,7 @@ const ProductsCard = (props) => {
 
     return (
         <>
-            <div className="me-5 m">
+            <div className="me-5 mb-5">
                 <figure>
                     <img src={img} alt="item-img" />
                 </figure>
@@ -35,7 +35,7 @@ const ProductsCard = (props) => {
                 <h3 className="price">₼ {price}</h3>
                 <button
                     type="button"
-                    className={`btn  btn-success`}
+                    className={`btn  btn-primary`}
                     onClick={handleAddToCart}
                 >
                     {

@@ -20,7 +20,7 @@ const Header = () => {
 
     return (
         <>
-            <header id="header" className='mb-4 bg-success text-light'>
+            <header id="header" className='mb-4 text-bg-primary pt-3  text-light'>
                 <div className="container mb-5">
                     <div className="navbar">
                         <h4>Redux Shopping Cart</h4>

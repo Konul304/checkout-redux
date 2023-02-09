@@ -38,10 +38,10 @@ const Cart = () => {
         <>
             {
                 isCartOpen && (
-                    <div id="cart">
-                        <div className="cart_content p-5 ">
-                            <div className="cart_head">
-                                <h2>Cart <small>({cartQuantity})</small></h2>
+                    <div id="cart" className=''>
+                        <div className="cart_content mt-5 ">
+                            <div className="cart_head ps-5 d-flex justify-content-md-between pe-5 pt-3 pb-3 text-bg-warning">
+                                <h2 className='ms-5'>Cart <small>({cartQuantity})</small></h2>
                                 <div
                                     title="Close"
                                     className="close_btn"
@@ -51,7 +51,7 @@ const Cart = () => {
                                 </div>
                             </div>
 
-                            <div className="cart_body d-flex">
+                            <div className="cart_body d-flex flex-wrap justify-content-center align-items-md-end pt-5">
                                 {
                                     cartQuantity === 0 ? (
                                         <h2>Cart is empty</h2>
@@ -62,28 +62,29 @@ const Cart = () => {
 
                                             return (
                                                 <div className="cart_items me-5" key={id}>
-                                                    <figure className="cart_items_img">
-                                                        <img src={img} alt="product-img" />
-                                                    </figure>
-
+                                                    <div className='d-flex align-items-start'>
+                                                        <figure className="cart_items_img">
+                                                            <img src={img} alt="product-img" />
+                                                        </figure>
+                                                        <button
+                                                            
+                                                            className="cart_items_delete btn btn-warning mt-2"
+                                                            onClick={() => handleRemove(id)}
+                                                        >
+                                                            &times;
+                                                        </button>
+                                                    </div>
                                                     <div className="cart_items_info">
                                                         <h4>{title}</h4>
                                                         <h3 className="price">₼ {itemTotal}</h3>
                                                     </div>
 
                                                     <div className="cart_items_quantity">
-                                                        <span onClick={() => handleDecrement(id)}>&#8722;</span>
-                                                        <b>{quantity}</b>
-                                                        <span onClick={() => handleIncrement(id)}>&#43;</span>
+                                                        <span className='btn btn-warning' onClick={() => handleDecrement(id)}>&#8722;</span>&nbsp;
+                                                        <b>{quantity}</b>&nbsp;
+                                                        <span className='btn btn-warning' onClick={() => handleIncrement(id)}>&#43;</span>
                                                     </div>
 
-                                                    <div
-                                                        title="Remove Item"
-                                                        className="cart_items_delete"
-                                                        onClick={() => handleRemove(id)}
-                                                    >
-                                                        <span>&times;</span>
-                                                    </div>
                                                 </div>
                                             );
                                         })
@@ -91,10 +92,10 @@ const Cart = () => {
                                 }
                             </div>
 
-                            <div className="cart_foot">
+                            <div className="cart_foot ps-5 mt-5 d-flex justify-content-end pt-2 pe-5 pb-3 bg-secondary text-light">
                                 <h3>
-                                    <small>Total:</small>
-                                    <b>₼ {cartTotal}</b>
+                                    <small>Total: &nbsp;</small>
+                                    <b>₼{cartTotal}</b>
                                 </h3>
                             </div>
                         </div>
