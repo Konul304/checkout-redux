@@ -27,7 +27,7 @@ const ProductsCard = (props) => {
 
     return (
         <>
-            <div className="me-5">
+            <div className="me-5 m">
                 <figure>
                     <img src={img} alt="item-img" />
                 </figure>
@@ -39,7 +39,7 @@ const ProductsCard = (props) => {
                     onClick={handleAddToCart}
                 >
                     {
-                    isAdded ? 'Added' : 'Add to cart'}
+                        isAdded ? 'Added' : 'Add to cart'}
                 </button>
             </div>
         </>
